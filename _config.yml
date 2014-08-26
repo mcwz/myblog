@@ -7,7 +7,7 @@ paginate_path: "index/page:num"
 safe: false
 
 #站点基础配置
-title: 零又十分之一
+title: 十又十分之一
 subTitle: 飞翔之猴
 description: 
 url: http://www.bytetown.net
@@ -40,4 +40,4 @@ page:
     last: false
 
 author:
-  name: 零又十分之一
+  name: 十又十分之一
