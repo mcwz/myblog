@@ -11,6 +11,7 @@ layout: default
 </p>
 <h1 class="lotus-pagetit">{{ page.title }}</h1>
 <p class="lotus-meta">Publish: <time class="date" pubdate="{{ page.date  | date: "%B %e, %Y" }}">{{ page.date | date: "%B %e, %Y" }}</time>
+<div class="share_line">
 <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style"><span class="jiathis_txt">分享到：</span>
 <a class="jiathis_button_weixin"></a>
@@ -30,6 +31,7 @@ var jiathis_config={
 </script>
 <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1861921" charset="utf-8"></script>
 <!-- JiaThis Button END -->
+</div>
 </p>
 <article  itemscope itemtype="http://schema.org/Article" class="lotus-post">
 {{ content }}
