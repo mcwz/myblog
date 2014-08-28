@@ -938,4 +938,4 @@ pre.prettyprint{
 .pagination li{list-style:none;}
 
 article .description{margin-bottom:15px;border-bottom:1px dotted #CCCCCC;padding-bottom:15px;}
-.share_line{height:25px;line-height:25px;float:right;}
+.share_line{height:25px;line-height:25px;float:left;}
