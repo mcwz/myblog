@@ -939,3 +939,4 @@ pre.prettyprint{
 
 article .description{margin-bottom:15px;border-bottom:1px dotted #CCCCCC;padding-bottom:15px;}
 .share_line{height:25px;line-height:25px;float:left;}
+pre{white-space:pre;white-space:pre-wrap;word-break:break-all;word-wrap:break-word;}
