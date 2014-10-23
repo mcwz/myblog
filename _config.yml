@@ -9,7 +9,8 @@ safe: false
 #站点基础配置
 title: 十又十分之一
 subTitle: 飞翔之猴
-description: 
+description: 这个博客将记录我个人对于IT方面的思考以及感悟。这些文章包括不限于开发、前端、运维等。只是本人记性不好，留在此处，权当记忆。
+keywords: 开发 JAVA PHP 前端 运维
 url: http://www.bytetown.net
 feed: /atom.xml
 
