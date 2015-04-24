@@ -18,6 +18,7 @@ keywords: memcached,mongodb,redis,区别,项目实践
 WebSocketServer.java 主要完成程序启动
 
 <pre class="prettyPrint">
+
 public class WebSocketServer {
 
 	public void run(int port) throws Exception {
@@ -80,19 +81,23 @@ public class WebSocketServer {
 	}
 
 }
+
 </pre>
 
 ClientPoll.java 客户端池子
 
 <pre class="prettyPrint">
+
 public class ClientPoll {
 	public static Map<String,ChannelHandlerContext> clientMap=new HashMap<String, ChannelHandlerContext>();
 }
+
 </pre>
 
 WebSocketServerHandler.java 完成websocket的定义过程
 
 <pre class="prettyPrint">
+
 public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> {
 	private static final Logger logger=Logger.getLogger(WebSocketServerHandler.class.getName());
 	private WebSocketServerHandshaker handshaker;
@@ -119,8 +124,7 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
 				clientIP = insocket.getAddress().getHostAddress();
 			}
 		}
-	}
-	
+	}	
 	
 	@Override
 	public void channelReadComplete(ChannelHandlerContext ctx) throws Exception
@@ -162,8 +166,11 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
 		}
 
 	}
+	
 </pre>
+
 <pre class="prettyPrint">	
+
 	private void handleWebSocketFrame(ChannelHandlerContext ctx,WebSocketFrame frame)
 	{
 		if(frame instanceof CloseWebSocketFrame)
@@ -208,12 +215,14 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
 		}
 	}
 }
+
 </pre>
 
 
 CheckRunningPoll.java我自己写的一个线程，检测是否有新消息要群发
 
 <pre class="prettyPrint">
+
 public class CheckRunningPoll implements Runnable {
 
 	@Override
@@ -235,11 +244,13 @@ public class CheckRunningPoll implements Runnable {
 	}
 
 }
+
 </pre>
 
 Broadcast.java广播消息
 
 <pre class="prettyPrint">
+
 public class Broadcast {
 	public static void broadcast(String message)
 	{
@@ -252,11 +263,13 @@ public class Broadcast {
 		
 	}
 }
+
 </pre>
 
 HTML代码，可以直接用支持Websocket的浏览器打开即可
 
 <pre class="prettyPrint">
+
 <p>
 	&lt;!DOCTYPE html&gt;<br />
 &lt;html&gt;<br />
@@ -324,6 +337,7 @@ else<br />
 <p>
 	<br />
 </p>
+
 </pre>
 
 ## 大概解释一下
