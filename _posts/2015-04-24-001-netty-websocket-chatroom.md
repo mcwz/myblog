@@ -263,7 +263,7 @@ public class Broadcast {
 
 HTML代码，可以直接用支持Websocket的浏览器打开即可
 
-```html
+```HTML
 
 <p>
 	&lt;!DOCTYPE html&gt;<br />
