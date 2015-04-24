@@ -162,7 +162,8 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
 		}
 
 	}
-	
+</pre>
+<pre class="prettyPrint">	
 	private void handleWebSocketFrame(ChannelHandlerContext ctx,WebSocketFrame frame)
 	{
 		if(frame instanceof CloseWebSocketFrame)
@@ -208,7 +209,7 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
 	}
 }
 </pre>
-</pre>
+
 
 CheckRunningPoll.java我自己写的一个线程，检测是否有新消息要群发
 
