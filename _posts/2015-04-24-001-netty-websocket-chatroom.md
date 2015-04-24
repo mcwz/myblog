@@ -146,7 +146,7 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
 			sendHttpResponse(ctx, req, new DefaultFullHttpResponse(HttpVersion.HTTP_1_1,HttpResponseStatus.BAD_REQUEST));
 			return ;
 		}
-		WebSocketServerHandshakerFactory wsFactory=new WebSocketServerHandshakerFactory("ws://192.168.12.51:8080/websocket", null, false);
+		WebSocketServerHandshakerFactory wsFactory=new WebSocketServerHandshakerFactory("ws://127.0.0.1:8080/websocket", null, false);
 		handshaker=wsFactory.newHandshaker(req);
 		if(handshaker==null)
 		{
@@ -169,7 +169,7 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
 	
 </pre>
 
-<pre class="prettyPrint">	
+
 
 	private void handleWebSocketFrame(ChannelHandlerContext ctx,WebSocketFrame frame)
 	{
@@ -216,12 +216,12 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
 	}
 }
 
-</pre>
+
 
 
 CheckRunningPoll.java我自己写的一个线程，检测是否有新消息要群发
 
-<pre class="prettyPrint">
+
 
 public class CheckRunningPoll implements Runnable {
 
@@ -245,11 +245,11 @@ public class CheckRunningPoll implements Runnable {
 
 }
 
-</pre>
+
 
 Broadcast.java广播消息
 
-<pre class="prettyPrint">
+
 
 public class Broadcast {
 	public static void broadcast(String message)
@@ -264,11 +264,11 @@ public class Broadcast {
 	}
 }
 
-</pre>
+
 
 HTML代码，可以直接用支持Websocket的浏览器打开即可
 
-<pre class="prettyPrint">
+
 
 <p>
 	&lt;!DOCTYPE html&gt;<br />
@@ -288,7 +288,7 @@ if (!window.WebSocket)&nbsp;<br />
 window.WebSocket = window.MozWebSocket;<br />
 }<br />
 if (window.WebSocket) {<br />
-socket = new WebSocket("ws://websocket.gxd.test.com:8080/websocket");<br />
+socket = new WebSocket("ws://localhost:8080/websocket");<br />
 socket.onmessage = function(event) {<br />
 var ta = document.getElementById('responseText');<br />
 ta.value = ta.value+event.data+"\r\n";<br />
@@ -338,7 +338,7 @@ else<br />
 	<br />
 </p>
 
-</pre>
+
 
 ## 大概解释一下
 
