@@ -17,7 +17,7 @@ keywords: memcached,mongodb,redis,区别,项目实践
 
 WebSocketServer.java 主要完成程序启动
 
-<pre class="prettyPrint">
+```java
 
 public class WebSocketServer {
 
@@ -82,21 +82,21 @@ public class WebSocketServer {
 
 }
 
-</pre>
+```
 
 ClientPoll.java 客户端池子
 
-<pre class="prettyPrint">
+```java
 
 public class ClientPoll {
 	public static Map<String,ChannelHandlerContext> clientMap=new HashMap<String, ChannelHandlerContext>();
 }
 
-</pre>
+```
 
 WebSocketServerHandler.java 完成websocket的定义过程
 
-<pre class="prettyPrint">
+```java
 
 public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> {
 	private static final Logger logger=Logger.getLogger(WebSocketServerHandler.class.getName());
@@ -166,10 +166,6 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
 		}
 
 	}
-	
-</pre>
-
-
 
 	private void handleWebSocketFrame(ChannelHandlerContext ctx,WebSocketFrame frame)
 	{
@@ -216,12 +212,11 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
 	}
 }
 
-
-
+```
 
 CheckRunningPoll.java我自己写的一个线程，检测是否有新消息要群发
 
-
+```java
 
 public class CheckRunningPoll implements Runnable {
 
@@ -245,11 +240,11 @@ public class CheckRunningPoll implements Runnable {
 
 }
 
-
+```
 
 Broadcast.java广播消息
 
-
+```java
 
 public class Broadcast {
 	public static void broadcast(String message)
@@ -264,11 +259,11 @@ public class Broadcast {
 	}
 }
 
-
+```
 
 HTML代码，可以直接用支持Websocket的浏览器打开即可
 
-
+```html
 
 <p>
 	&lt;!DOCTYPE html&gt;<br />
@@ -338,7 +333,7 @@ else<br />
 	<br />
 </p>
 
-
+```
 
 ## 大概解释一下
 
