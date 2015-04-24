@@ -208,6 +208,7 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
 	}
 }
 </pre>
+</pre>
 
 CheckRunningPoll.java我自己写的一个线程，检测是否有新消息要群发
 
