@@ -255,68 +255,73 @@ public class Broadcast {
 HTML代码，可以直接用支持Websocket的浏览器打开即可
 
 <pre class="prettyPrint">
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-Netty WebSocket 时间服务器
-</head>
-<br>
-<body>
-<br>
-<script type="text/javascript">
-var socket;
-var autosend;
-if (!window.WebSocket) 
-{
-	window.WebSocket = window.MozWebSocket;
-}
-if (window.WebSocket) {
-	socket = new WebSocket("ws://websocket.gxd.test.com:8080/websocket");
-	socket.onmessage = function(event) {
-		var ta = document.getElementById('responseText');
-		ta.value = ta.value+event.data+"\r\n";
-	};
-	socket.onopen = function(event) {
-		var ta = document.getElementById('responseText');
-		ta.value = "打开WebSocket服务正常，浏览器支持WebSocket!\r\n";
-		autosend=setInterval(function(){
-		 now=new Date();
-			send("我的时间是："+now.getFullYear() +"年"+(now.getMonth()+1)+"月"+now.getDate() +"日"+now.getHours()+"时"+now.getMinutes() +"分"+now.getSeconds()+"秒");
-		},8000);
-	};
-	socket.onclose = function(event) {
-		var ta = document.getElementById('responseText');
-		ta.value = "";
-		ta.value = "WebSocket 关闭!"; 
-	};
-}
-else
-	{
-	alert("抱歉，您的浏览器不支持WebSocket协议!");
-	}
-
-function send(message) {
-	if (!window.WebSocket) { return; }
-	if (socket.readyState == WebSocket.OPEN) {
-		socket.send(message);
-	}
-	else
-		{
-		  alert("WebSocket连接没有建立成功!");
-		}
-}
-</script>
-<form onsubmit="return false;">
-<input type="text" name="message" value="Netty最佳实践"/>
-<br><br>
-<input type="button" value="发送WebSocket请求消息" onclick="send(this.form.message.value)"/>
-<hr color="blue"/>
-<h3>服务端返回的应答消息</h3>
-<textarea id="responseText" style="width:900px;height:300px;"></textarea>
-</form>
-</body>
-</html>
+<p>
+	&lt;!DOCTYPE html&gt;<br />
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;meta charset="UTF-8"&gt;<br />
+Netty WebSocket 时间服务器<br />
+&lt;/head&gt;<br />
+&lt;br&gt;<br />
+&lt;body&gt;<br />
+&lt;br&gt;<br />
+&lt;script type="text/javascript"&gt;<br />
+var socket;<br />
+var autosend;<br />
+if (!window.WebSocket)&nbsp;<br />
+{<br />
+window.WebSocket = window.MozWebSocket;<br />
+}<br />
+if (window.WebSocket) {<br />
+socket = new WebSocket("ws://websocket.gxd.test.com:8080/websocket");<br />
+socket.onmessage = function(event) {<br />
+var ta = document.getElementById('responseText');<br />
+ta.value = ta.value+event.data+"\r\n";<br />
+};<br />
+socket.onopen = function(event) {<br />
+var ta = document.getElementById('responseText');<br />
+ta.value = "打开WebSocket服务正常，浏览器支持WebSocket!\r\n";<br />
+autosend=setInterval(function(){<br />
+now=new Date();<br />
+send("我的时间是："+now.getFullYear() +"年"+(now.getMonth()+1)+"月"+now.getDate() +"日"+now.getHours()+"时"+now.getMinutes() +"分"+now.getSeconds()+"秒");<br />
+},8000);<br />
+};<br />
+socket.onclose = function(event) {<br />
+var ta = document.getElementById('responseText');<br />
+ta.value = "";<br />
+ta.value = "WebSocket 关闭!";&nbsp;<br />
+};<br />
+}<br />
+else<br />
+{<br />
+alert("抱歉，您的浏览器不支持WebSocket协议!");<br />
+}<br />
+<br />
+function send(message) {<br />
+if (!window.WebSocket) { return; }<br />
+if (socket.readyState == WebSocket.OPEN) {<br />
+socket.send(message);<br />
+}<br />
+else<br />
+{<br />
+&nbsp;alert("WebSocket连接没有建立成功!");<br />
+}<br />
+}<br />
+&lt;/script&gt;<br />
+&lt;form onsubmit="return false;"&gt;<br />
+&lt;input type="text" name="message" value="Netty最佳实践"/&gt;<br />
+&lt;br&gt;&lt;br&gt;<br />
+&lt;input type="button" value="发送WebSocket请求消息" onclick="send(this.form.message.value)"/&gt;<br />
+&lt;hr color="blue"/&gt;<br />
+&lt;h3&gt;服务端返回的应答消息&lt;/h3&gt;<br />
+&lt;textarea id="responseText" style="width:900px;height:300px;"&gt;&lt;/textarea&gt;<br />
+&lt;/form&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;
+</p>
+<p>
+	<br />
+</p>
 </pre>
 
 ## 大概解释一下
