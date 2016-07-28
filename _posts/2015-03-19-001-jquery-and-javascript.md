@@ -3,6 +3,7 @@ layout: post
 title: 关于jQuery与JavaScript的事件绑定
 description: 在jQuery里摸爬滚打了一阵子后，感觉对JQ也算是比较来电了，谁知，今天遇到一件事，感觉还是有点力不从心，因此特意在此处记下来。
 keywords: jQuery , JavaScript , 事件绑定
+categories: [前端, jQuery,入门]
 ---
 
 以下属于当时的牢骚，想看正文的可以忽略，goto label:正文。 

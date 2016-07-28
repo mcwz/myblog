@@ -3,6 +3,7 @@ layout: post
 title: 使用单例模式解决mmseg4j在高并发时导致内存溢出问题
 description: 使用 Lucene 做了一个站内搜索，分词器是 mmseg4j 。此搜索不仅用作正常搜索之用，同时借助搜索完成了相关文章的功能。因相关文章处在内容页，并发量很高，本文主要记录在高并发的情况下我是如何解决了 mmseg4j 的内存问题。
 keywords: mmseg4j,Lucene,高并发,内存,单例
+categories: [开发, 入门]
 ---
 
 ##之前的项目

@@ -3,6 +3,7 @@ layout: post
 title: 开启shiro remember me功能
 description: 使用shiro作为权限管理的WEB程序可以开启remember me功能，这样就可以使得登录过的用户无需再次登录即可。
 keywords: shiro ,remember me
+categories: [开发, 入门]
 ---
 
 ##开启方式

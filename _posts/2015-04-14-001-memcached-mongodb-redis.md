@@ -3,6 +3,7 @@ layout: post
 title: memcached，mongodb和redis三者区别，以及memcached项目实践
 description: 对于Nosql数据库，大家好像比前几年更明智些了，不在那么盲目的追随了。详细阅读了一些介绍性的文字，此处记录一下这几个软件的区别，同时分享一个前两年做的一个用到memcached的构架。
 keywords: memcached,mongodb,redis,区别,项目实践
+categories: [开发, 构架]
 ---
 
 两三年前做了一个不是很大的项目，代码级也不大，数量级也不大，只是突发流量稍微大些，先是拖垮了数据库服务器，后来又拖垮整个Web服务器，优化后，服务器没啥问题了，但是带宽……好了不说这个了，先大概说一下个人理解的这三者的区别吧。
