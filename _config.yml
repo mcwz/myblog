@@ -1,4 +1,3 @@
-markdown: rdiscount
 highlighter: true
 plugins: ./_plugins
 paginate: 15
