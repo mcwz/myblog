@@ -2,8 +2,9 @@
 layout: post
 title: 使用netty基于websocket做一个聊天室
 description: 本文介绍netty如何建立websocket链接，如果给别人发送信息，以及如何发送广播。
-keywords: memcached,mongodb,redis,区别,项目实践
-categories: [开发, 入门]
+keywords: netty,websocket
+categories: [开发]
+tags: [netty,WebSocket]
 ---
 
 实际上以前做过一次netty实现websocket的实验，当时是按着《netty权威指南》书中的介绍敲代码做的测试，虽然运行没有问题，但是想进一步实现客户端互发消息没成功，恰好当时忽然忙起来了，这事儿就过去了。
