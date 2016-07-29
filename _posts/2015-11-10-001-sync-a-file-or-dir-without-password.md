@@ -4,7 +4,6 @@ title: rsync通过ssh免密码同步单个文件或者目录
 description: rsync在配置同步时，通常是以同步文件目录的形式存在，同步时做验证时也是通过rsync自有的用户验证居多，本文介绍一种同步单个文件的方式，同时可以达到免除密码同步
 keywords: rsync,ssh,文件,同步,目录
 categories: [运维]
-tags: [rsync]
 ---
 
 ## 背景信息

@@ -4,7 +4,6 @@ title: oneframe 设计 v0.1版
 description: oneframe 是一个使用PHP写的一个web框架，初期会学习一些CI的设计思路，后期可能加入很多自己的想法。正式版之前采用0.x版本号。此文仅记录初步构想。
 keywords: oneframe,PHP框架,框架设计
 categories: [开发]
-tags: [PHP]
 ---
 
 ## 整体构架

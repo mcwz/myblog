@@ -4,7 +4,6 @@ title: 关于Apache MIME和MIME_Magic模块
 description: 今天要给Discuz程序里做一个模块，这个模块可以直接在帖子里显示PDF文档，部署过程中发现运行环境不能正确显示，于是研究了一番，发现还是与MIME有关。
 keywords: Apache , MIME , MIME_Magic
 categories: [记录]
-tags: [Apache]
 ---
 
 ## 事件经过

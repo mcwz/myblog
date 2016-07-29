@@ -4,7 +4,6 @@ title: MarkDown 学习
 description: 感觉MarkDown忽然就冒出来了，以前觉得这个东西没啥用，它能完成的HTML都能完成，干嘛还要再重新学习一下呢？现在玩jekyll发现，这个东西还是有价值的，此处权当学习记录
 keywords: MarkDown,入门,学习
 categories: [记录]
-tags: [MarkDown]
 ---
 
 感觉MarkDown忽然就冒出来了，以前觉得这个东西没啥用，它能完成的HTML都能完成，干嘛还要再重新学习一下呢？现在玩jekyll发现，这个东西还是有价值的，此处权当学习记录
