@@ -22,6 +22,10 @@ nav:
     url: /archives.html
     icon: icon-reorder
     class: none
+  - text: 文章分类
+    url: /category.html
+    icon: icon-tags
+    class: none
   - text: 关于我
     url: /contact.html
     icon: icon-envelope-alt
